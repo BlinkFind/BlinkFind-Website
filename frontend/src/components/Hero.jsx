@@ -17,7 +17,7 @@ const Hero = () => {
             <div className="justify-center hidden xs:flex">
               <img
                 className="w-[672px] h-[504px] lg:w-[347.64px] lg:h-[291.77px] sm:w-[300px] sm:h-[300px] xs:w-[350px] xs:h-[250px] xs:mb-[10px]"
-                src="HeroImages/img/hero picture.png"
+                src="HeroImages/img/heroImage2.png"
                 alt=""
               />
             </div>
@@ -51,7 +51,7 @@ const Hero = () => {
             <div className="flex justify-center xs:hidden">
               <img
                 className="lg:w-[672px] lg:h-[504px] sm:w-[400px] sm:h-[260px] xs:w-[250px] xs:h-[200px]"
-                src="HeroImages/img/hero picture.png"
+                src="HeroImages/img/heroImage2.png"
                 alt=""
               />
             </div>
@@ -65,7 +65,7 @@ const Hero = () => {
               True Design is Invisible
             </span>
             <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
+              <img src="logo.svg" alt="logo" />
               <span
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
@@ -102,7 +102,25 @@ const Hero = () => {
               True Design is Invisible
             </span>
             <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
+              <img src="logo.svg" alt="logo" />
+              <span
+                className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
+                style={{ color: "rgb(2, 46, 80)" }}
+              >
+                Quick
+              </span>
+              <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
+                Finds
+              </span>
+            </div>
+            <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
+              We Make Solutions Simple
+            </span>{" "}
+            <span className="lg:text-3xl xs:text-lg font-bold mr-[40px] sm:text-xl">
+              True Design is Invisible
+            </span>
+            <div className="flex items-center relative mr-[40px]">
+              <img src="logo.svg" alt="" />
               <span
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
@@ -138,7 +156,7 @@ const Hero = () => {
               True Design is Invisible
             </span>
             <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
+              <img src="logo.svg" alt="logo" />
               <span
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
@@ -156,25 +174,7 @@ const Hero = () => {
               True Design is Invisible
             </span>
             <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
-              <span
-                className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
-                style={{ color: "rgb(2, 46, 80)" }}
-              >
-                Quick
-              </span>
-              <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
-              </span>
-            </div>
-            <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
-              We Make Solutions Simple
-            </span>{" "}
-            <span className="lg:text-3xl xs:text-lg font-bold mr-[40px] sm:text-xl">
-              True Design is Invisible
-            </span>
-            <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
+              <img src="logo.svg" alt="logo" />
               <span
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
