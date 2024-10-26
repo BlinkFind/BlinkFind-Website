@@ -3,7 +3,7 @@ import React from 'react'
 const ContactUs = () => {
   return (
     <div className='flex justify-center items-center'>
-    <div className="w-full  max-w-md">
+    <div className="w-full  max-w-md mx-2">
     <div>
       <p
         className=" text-[#51B504] text-center poppins-thin font-medium  leading-[24px]

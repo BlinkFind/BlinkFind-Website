@@ -3,7 +3,7 @@ import React from 'react'
 const Categories = () => {
   return (
     <>
-    <div className="container mx-auto">
+    <div className="container mx-auto hidden sm:block">
   <div className="m-2 p-5">
     <h1 className="text-[#51B504] text-left text-xl font-medium my-8 mt-14 our-Expertise">
       OUR EXPERTISE
@@ -168,7 +168,7 @@ const Categories = () => {
 </div>
 {/* //mobile view */}
 
-
+<div className='sm:hidden block'>
   <section className="text-center">
     {/* Header Section */}
     <h1 className="text-[#51B504] text-left text-sm font-medium mb-px">
@@ -293,6 +293,7 @@ const Categories = () => {
         </button>
       </div>
     </div>
+  </div>
   </div>
 </>
 
