@@ -44,7 +44,7 @@ const AboutUs = () => {
               At QuickFinds, we are committed to rapidly finding, fixing, and improving solutions, whether through technology, design, or creative problem-solving. Our platform empowers users to tackle everyday inefficiencies and bring transformative ideas to life, while also creating opportunities in software development, tech innovation, and job creation.
             </p>
             <p className="text-[#4A5568]">
-              With a future-focused approach, QuickFinds is not just solving problems—we're building a smarter, more efficient world. Our agile team is ready to collaborate, innovate, and redefine how real-world challenges are tackled.
+              With a future-focused approach, QuickFinds is not just solving problems—we&apos;re building a smarter, more efficient world. Our agile team is ready to collaborate, innovate, and redefine how real-world challenges are tackled.
             </p>
           </div>
           <div className="relative h-[300px] md:h-[400px]">
