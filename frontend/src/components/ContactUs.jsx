@@ -8,7 +8,7 @@ const ContactUs = () => {
           <h3 className="font-poppins text-[#51B504] text-sm lg:text-lg font-semibold uppercase tracking-wide mb-2">
             Contact Us
           </h3>
-          <h2 className="text-3xl sm:text-4xl font-bold text-[#130F26] mb-4">
+          <h2 className="text-2xl sm:text-4xl font-bold text-[#130F26] mb-4">
             We&apos;d love to hear from you
           </h2>
           <p className="text-lg text-[#4A5568] max-w-2xl mx-auto">
