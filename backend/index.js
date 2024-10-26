@@ -2,17 +2,19 @@ const express = require('express');
 const UserRouter = require('./routers/UserRouter');
 const cors = require('cors');
 
-//initializing express
+// Initializing express
 const app = express();
-
 const port = 5000;
 
-app.use( cors({
+// Middleware to parse JSON and set CORS headers
+app.use(express.json()); // Moved this line up to ensure JSON parsing
+app.use(cors({
     origin: ['http://localhost:3000'],
 }));
 
-app.use(express.json());
+// Defining routes
+app.use('/user', UserRouter);
 
-app.listen(port,() => {
-    console.log('server started'); 
-})
+app.listen(port, () => {
+    console.log('Server started on port', port); 
+});

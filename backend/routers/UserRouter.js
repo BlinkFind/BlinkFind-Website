@@ -7,19 +7,22 @@ require("dotenv").config();
 const router = express.Router();
 
 router.post("/add", (req, res) => {
-  console.log(req.body);
-  //asynchronous that why we will get promise obj
+  const { password } = req.body;
+  if (!password) {
+    return res.status(400).json({ message: "Password is required." });
+  }
+
   new Model(req.body)
-  .save()
-  //thenc is the shortcut
-  .then((result) => {
-    res.status(200).json(result);
-  })
-  .catch((err) => {
-    console.log(err);
-    res.status(500).json(err);
-  });
+    .save()
+    .then((result) => {
+      res.status(200).json(result);
+    })
+    .catch((err) => {
+      console.log(err);
+      res.status(500).json(err);
+    });
 });
+
 
 // getall
 router.get("/getall", (req, res) => {
@@ -103,17 +106,18 @@ router.post("/authenticate", (req, res) => {
         const payload = { _id, email, password };
         jwt.sign(
           payload,
-          "process.env.JWT_SECRET",
-          { expiresIn: "1hr" },
+          process.env.JWT_SECRET,  // Remove quotes around process.env.JWT_SECRET
+          { expiresIn: "1h" },
           (err, token) => {
             if (err) {
               console.log(err);
               res.status(500).json(err);
             } else {
-              res.status(200).json({ token: token });
+              res.status(200).json({ token });
             }
           }
         );
+        
       } else {
         res.status(401).json({ message: "Invalid Credentials" });
       }

@@ -18,6 +18,7 @@ const Navbar = () => {
     { name: 'Services', href: '#Services' },
     { name: 'Projects', href: '#Projects' },
     { name: 'Contact Us', href: '#Contact Us' },
+    { name: 'Login', href: '/login' },
   ]
 
   useEffect(() => {
