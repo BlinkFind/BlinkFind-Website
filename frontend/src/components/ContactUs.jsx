@@ -2,7 +2,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className='flex justify-center items-center'>
+    <div className='py-[80px] px-[2rem] w-screen flex items-center justify-center  mb-8'>
     <div className="w-full  max-w-md mx-2">
     <div>
       <p
