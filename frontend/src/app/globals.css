@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/* Hero Animations */
+@keyframes slideHero {
+  from {
+      transform: translateX(0)
+  }
+  to {
+      transform: translateX(-100%)
+  }
+}
+
+.logo-slide{
+  animation: 10s slideHero infinite linear;
+}
+
+#root{
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
