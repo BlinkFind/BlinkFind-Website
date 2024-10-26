@@ -59,7 +59,7 @@ const Hero = () => {
         </div>
 
         {/* Animation */}
-        <div className="logo-animation bg-white lg:pt-[30px] lg:pb-[30px] overflow-hidden xs:mt-[10px] xs:pt-[0px] xs:pb-[0px] sm:pt-[15px] sm:pb-[15px]">
+        <div className="logo-animation bg-[#F8FFF8] lg:pt-[30px] lg:pb-[30px] overflow-hidden xs:mt-[10px] xs:pt-[0px] xs:pb-[0px] sm:pt-[15px] sm:pb-[15px]">
           <div className="logo-slide flex items-center  gap-[30px] whitespace-nowrap lg:h-[10vh] md:h-[5vh] xs: h-[7vh]">
             <span className="lg:text-3xl xs:text-lg font-bold mr-[40px] sm:text-xl">
               True Design is Invisible
