@@ -3,8 +3,8 @@ import React from "react";
 
 const ShowcaseProject = () => {
   return (
-    <>
-      <div className="lg:mt-24 lg:ml-28 mt-12 ml-4 mr-4 lg:mr-28 lg:mb-24">
+    <div id="Projects">
+      <div className="lg:pt-24 lg:ml-28 mt-20 ml-4 mr-4 lg:mr-28 lg:mb-24">
         <h1 className="font-poppins text-[#51B504] text-sm lg:text-xl font-medium lg:font-semibold ">
           OUR PROJECTS
         </h1>
@@ -50,7 +50,7 @@ const ShowcaseProject = () => {
           <p>website rebrand</p>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

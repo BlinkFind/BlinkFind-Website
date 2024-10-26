@@ -3,7 +3,7 @@ import React from 'react'
 const Categories = () => {
   return (
     <>
-    <div className="container mx-auto ">
+    <div className="container mx-auto "id="Services">
   <div className="m-2 p-5">
   <h1 className="font-poppins text-[#51B504] text-sm my-8 mt-14 lg:text-xl font-medium lg:font-semibold ">
           OUR EXPERTISE

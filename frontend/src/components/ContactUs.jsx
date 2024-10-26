@@ -1,8 +1,9 @@
 import React from 'react'
 
+
 const ContactUs = () => {
   return (
-    <div className='py-[80px] px-[2rem]  w-screen flex items-center justify-center  mb-8'>
+    <div className='py-[60px] px-[2rem]  w-screen flex items-center justify-center  mb-8' id='Contact Us'>
     <div className="w-full  max-w-md mx-2">
     <div>
     <h1 className="font-poppins text-[#51B504] text-sm lg:text-xl font-medium lg:font-semibold text-center my-8">
@@ -120,29 +121,15 @@ const ContactUs = () => {
         </div>
         {/* Checkbox */}
         <div className="flex items-center pt-0">
-          <div className="h-5 w-5 bg-white border border-gray-300 rounded-md flex items-center justify-center  cursor-pointer">
+          
             <input
               id="comments"
               name="comments"
               type="checkbox"
-              className="peer h-5 w-5 cursor-pointer transition-all appearance-none rounded-md shadow hover:shadow-md border border-slate-300 checked:bg-[#51B504]  z-30"
+              className='h-4 w-4 text-[#51B504] border-gray-300 rounded'
             />
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width={20}
-              height={20}
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth={2}
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              className="icon icon-tabler icons-tabler-outline icon-tabler-check z-10 absolute text-white"
-            >
-              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-              <path d="M5 12l5 5l10 -10" />
-            </svg>
-          </div>
+          
+         
           <label
             htmlFor="comments"
             className="ml-3 text-md font-medium text-[#344054] cursor-pointer poppins-thin"
@@ -150,7 +137,7 @@ const ContactUs = () => {
             You agree to our friendly
             <a
               href="#"
-              className="text-[#344054] underline poppins-thin font-light"
+              className="text-[#344054] underline poppins-thin font-light pl-1"
             >
               privacy policy
             </a>

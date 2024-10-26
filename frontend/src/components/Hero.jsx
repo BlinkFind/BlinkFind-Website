@@ -1,39 +1,15 @@
+'use client'
+
 import React from 'react'
 
 const Hero = () => {
  
+ 
   return (
     <>
-      <div className="bg-[#D1FFD1]">
+      <div className="bg-[#D1FFD1]" id="Home">
         {/* Nav Bar */}
-        <nav className="flex justify-between  items-center h-[80px] w-[80vw] xs:w-[90vw] mx-auto">
-          <div className="flex items-center relative">
-            <img src="HeroImages/img/Logo.png" alt="" />
-            <span
-              className="font-poppins text-lg font-bold leading-[30px] text-left"
-              style={{ color: "rgb(2, 46, 80)" }}
-            >
-              Quick
-            </span>
-            <span className="text-[#51B504] font-poppins text-lg font-bold leading-[30px] text-left">
-              Finds
-            </span>
-          </div>
-          <ul className="flex lg:gap-[30px] items-center  h-[44px]  font-poppins font-[500] leading-[24x] lg:text-lg sm:text-[12px] sm:gap-[5px] sm:leading-[18x] xs:hidden">
-            <li className="lg:p-[10px] sm:p-[6px] ">Home</li>
-            <li className="lg:p-[10px] sm:p-[6px]">About Us</li>
-            <li className="lg:p-[10px] sm:p-[6px]">Services</li>
-            <li className="lg:p-[10px] sm:p-[6px]">Projects</li>
-            <li className="">
-              <button className="bg-[#51B504] text-[#FFFFFF] lg:pl-[10px] lg:pr-[10px] lg:pt-[5px] lg:pb-[5px] lg:rounded-[10px] sm:pt-[2px] sm:pb-[2px] sm:pr-[10px] sm:pl-[10px] sm:rounded-[5px]">
-                Contact Us
-              </button>
-            </li>
-          </ul>
-          <div className="hidden xs:block">
-            <img src="/HeroImages/img/Vector.png" alt="" />
-          </div>
-        </nav>
+       
         {/* Hero Section */}
         <div className="w-[80vw] mx-auto xs:flex-col-reverse sm:flex mt-10 xs:mt-0 sm:mt-0">
           {/* img for mobile : xs */}
