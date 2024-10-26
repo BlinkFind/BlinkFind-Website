@@ -1,3 +1,4 @@
+import Categories1 from "@/components/AnimatedCategories";
 import OurTeam1 from "@/components/AnimatedOurTeam";
 import Categories from "@/components/Categories";
 import ContactUs from "@/components/ContactUs";
@@ -13,10 +14,12 @@ export default function Home() {
     <div className="pt-[80px] bg-[#F8FFF8]">
       
       <Hero />
-      <Categories />
+      <Categories1/>
+      
       <ShowcaseProject />
       <OurTeam1/>
       <ContactUs />  
+      
       <Footer />
     </div>
     </>
