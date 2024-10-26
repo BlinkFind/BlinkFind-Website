@@ -4,7 +4,7 @@ import React from "react";
 const ShowcaseProject = () => {
   return (
     <div id="Projects">
-      <div className="lg:pt-24 lg:ml-28 mt-20 ml-4 mr-4 lg:mr-28 lg:mb-24">
+      <div className="lg:pt-24 lg:ml-28 mt-20 ml-4 mr-4 lg:mr-28 lg:mb-20">
         <h1 className="font-poppins text-[#51B504] text-sm lg:text-xl font-medium lg:font-semibold ">
           OUR PROJECTS
         </h1>
@@ -44,10 +44,7 @@ const ShowcaseProject = () => {
           platforms. This is a website rebrand
         </p>
         <div className="hidden lg:block text-2xl mt-8 font-poppins">
-          <p>This is a website for a client who want to achieve their</p>
-          <p>goals and meet their users needs while also</p>
-          <p>increasing their reach. Accross all platforms. This is a</p>
-          <p>website rebrand</p>
+          <p>This is a website for a client who want to achieve their goals and meet their users needs while also increasing their reach. Accross all platforms. This is a website rebrand</p>
         </div>
       </div>
     </div>

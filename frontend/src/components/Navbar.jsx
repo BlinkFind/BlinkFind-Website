@@ -12,7 +12,13 @@ const Navbar = () => {
     setIsSidebarOpen(false)
   }
 
-  const navItems = ['Home', 'About Us', 'Services', 'Projects', 'Contact Us']
+  const navItems = [
+    { name: 'Home', href: '#Home' },
+    { name: 'About Us', href: '/aboutus' }, // Change href to point to About Us page
+    { name: 'Services', href: '#Services' },
+    { name: 'Projects', href: '#Projects' },
+    { name: 'Contact Us', href: '#Contact Us' },
+  ]
 
   useEffect(() => {
     const handleResize = () => {
@@ -39,16 +45,19 @@ const Navbar = () => {
           &times;
         </button>
         <nav className="flex flex-col gap-4">
-          {navItems.map((item) => (
+          {navItems.map(({ name, href }) => (
             <Link
-              key={item}
-              href={`#${item}`}
+              key={name}
+              href={href}
               className={`p-2 rounded-[10px] ${
-                activeItem === item ? 'bg-[#51B504] text-[#FFFFFF]' : 'text-[#022E50]'
+                activeItem === name ? 'bg-[#51B504] text-[#FFFFFF]' : 'text-[#022E50]'
               }`}
-              onClick={() => handleItemClick(item)}
+              onClick={() => {
+                handleItemClick(name)
+                if (name !== 'About Us') setIsSidebarOpen(false); // Close sidebar if not About Us
+              }}
             >
-              {item}
+              {name}
             </Link>
           ))}
         </nav>
@@ -57,8 +66,8 @@ const Navbar = () => {
   )
 
   return (
-    <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10"> {/* Added overflow-x-hidden */}
-      <nav className="flex justify-between items-center h-[80px] max-w-full px-4 mx-auto"> {/* Ensured max-w-full */}
+    <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10">
+      <nav className="flex justify-between items-center h-[80px] max-w-full px-4 mx-auto">
         <div className="flex items-center relative">
           <img src="/HeroImages/img/Logo.png" alt="Logo" />
           <span className="font-poppins text-lg font-bold leading-[30px] text-left text-[#022E50]">
@@ -69,16 +78,19 @@ const Navbar = () => {
           </span>
         </div>
         <ul className="flex lg:gap-[30px] items-center h-[44px] font-poppins font-[500] leading-[24px] lg:text-lg sm:text-[12px] sm:gap-[5px] sm:leading-[18px] xs:hidden cursor-pointer">
-          {navItems.map((item) => (
+          {navItems.map(({ name, href }) => (
             <li
-              key={item}
+              key={name}
               className={`lg:p-[10px] sm:p-[6px] ${
-                activeItem === item ? 'bg-[#51B504] text-[#FFFFFF] rounded-[10px]' : ''
+                activeItem === name ? 'bg-[#51B504] text-[#FFFFFF] rounded-[10px]' : ''
               }`}
-              onClick={() => handleItemClick(item)}
+              onClick={() => {
+                handleItemClick(name)
+                if (name !== 'About Us') setIsSidebarOpen(false); // Close sidebar if not About Us
+              }}
             >
-              <Link href={`#${item}`} scroll={true}>
-                {item}
+              <Link href={href} scroll={true}>
+                {name}
               </Link>
             </li>
           ))}

@@ -84,7 +84,7 @@ const Hero = () => {
               True Design is Invisible
             </span>
             <div className="flex items-center relative mr-[40px]">
-              <img src="HeroImages/img/Logo.png" alt="" />
+              <img src="logo.svg" alt="logo" />
               <span
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
