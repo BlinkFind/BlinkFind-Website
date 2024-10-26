@@ -82,7 +82,7 @@ const OurTeam = () => {
   console.log("data",teamMembers)
 
   return (
-    <section className="py-12 bg-white" id="our-team">
+    <section className="py-12 bg-[#F8FFF8]" id="our-team">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left">
         <h1 className="font-poppins text-[#51B504] my-8 4 text-sm lg:text-xl font-medium lg:font-semibold ">

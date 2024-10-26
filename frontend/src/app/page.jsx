@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
     <Navbar/>
-    <div className="pt-[80px]">
+    <div className="pt-[80px] bg-[#F8FFF8]">
       
       <Hero />
       <Categories />
