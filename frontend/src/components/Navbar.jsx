@@ -57,8 +57,8 @@ const Navbar = () => {
   )
 
   return (
-    <div className='bg-[#D1FFD1] w-screen fixed z-10'>
-      <nav className="flex justify-between items-center h-[80px] w-[80vw] xs:w-[90vw] mx-auto">
+    <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10"> {/* Added overflow-x-hidden */}
+      <nav className="flex justify-between items-center h-[80px] max-w-full px-4 mx-auto"> {/* Ensured max-w-full */}
         <div className="flex items-center relative">
           <img src="/HeroImages/img/Logo.png" alt="Logo" />
           <span className="font-poppins text-lg font-bold leading-[30px] text-left text-[#022E50]">
