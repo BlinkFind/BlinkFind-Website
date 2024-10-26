@@ -153,7 +153,7 @@ const CompactLogin = () => {
             </div>
           </form>
           <p className="mt-6 text-center text-sm text-[#4A5568]">
-            Don't have an account?{" "}
+            Don&apos;t have an account?{" "}
             <Link
               href="/signup"
               className="font-medium text-[#51B504] hover:text-[#45A003] transition-colors duration-300"
