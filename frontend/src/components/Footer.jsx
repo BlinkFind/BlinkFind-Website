@@ -7,7 +7,7 @@ const Footer = () => {
     {/* First column: Logo, Social Icons, and Text */}
     <div className="flex-1">
       <div className="flex items-center space-x-3">
-        <img src="logo.png" alt="QuickFinds Logo" className="w-12" />
+        <img src="/HeroImages/img/Logo.png" alt="QuickFinds Logo" className="w-12" />
         <h3 className="text-2xl font-bold">
           Quick<span className="text-green-600">Finds</span>
         </h3>
