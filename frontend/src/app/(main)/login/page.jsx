@@ -32,7 +32,7 @@ const CompactLogin = () => {
                 alt="QuickFinds Logo"
                 layout="fill"
                 objectFit="contain"
-                className="animate-pulse"
+               
               />
             </div>
           </div>

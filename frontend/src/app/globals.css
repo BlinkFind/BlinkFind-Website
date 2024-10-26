@@ -38,3 +38,49 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/* Custom Scrollbar */
+
+.team-carousel .slick-list {
+  margin: 0 -10px;
+}
+
+.team-carousel .slick-slide > div {
+  padding: 0 10px;
+}
+
+.team-carousel .slick-dots li button:before {
+  color: #51B504;
+}
+
+.team-carousel .slick-dots li.slick-active button:before {
+  color: #51B504;
+}
+
+.team-carousel .slick-prev,
+.team-carousel .slick-next {
+  z-index: 1;
+}
+
+.team-carousel .slick-prev {
+  left: -25px;
+}
+
+.team-carousel .slick-next {
+  right: -25px;
+}
+
+.team-carousel .slick-prev:before,
+.team-carousel .slick-next:before {
+  color: #51B504;
+}
+
+@media (max-width: 640px) {
+  .team-carousel .slick-prev {
+    left: -15px;
+  }
+
+  .team-carousel .slick-next {
+    right: -15px;
+  }
+}
