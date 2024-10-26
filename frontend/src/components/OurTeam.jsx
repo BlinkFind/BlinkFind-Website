@@ -81,22 +81,22 @@ const OurTeam = () => {
       },
       description:
         "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
-    }
+    },
   ];
 
   return (
     <section className="py-12 bg-[#F8FFF8]" id="our-team">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left">
-          <h1 className="font-poppins text-[#51B504] text-sm my-8 mt-14 lg:text-xl font-medium lg:font-semibold ">
+          <h1 className="font-poppins text-[#51B504] text-sm my-8 mt-14 lg:text-xl font-medium lg:font-semibold">
             OUR TEAM
           </h1>
-          <p className="text-left font-semibold sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl sm:pr-0 md:pr-12 lg:pr-12 xl:pr-12  mb-20 sm:w-full md:w-full lg:w-3/4 xl:w-2/4 antialiased">
+          <p className="text-left font-semibold sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl sm:pr-0 md:pr-12 lg:pr-12 xl:pr-12 mb-20 sm:w-full md:w-full lg:w-3/4 xl:w-2/4 antialiased">
             Meet The Team Driving Our Growth And Customer Satisfaction
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="bg-white rounded-2xl flex flex-col">
               {/* Image in the upper section */}
