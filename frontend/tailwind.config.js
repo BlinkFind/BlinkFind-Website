@@ -11,6 +11,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens:{
+        'xs' : {'max': '639px'}
+      },
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
