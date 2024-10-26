@@ -5,9 +5,9 @@ const Categories = () => {
     <>
     <div className="container mx-auto ">
   <div className="m-2 p-5">
-    <h1 className="text-[#51B504] text-left text-xl font-medium my-8 mt-14 our-Expertise">
-      OUR EXPERTISE
-    </h1>
+  <h1 className="font-poppins text-[#51B504] text-sm my-8 mt-14 lg:text-xl font-medium lg:font-semibold ">
+          OUR EXPERTISE
+        </h1>
     <p className="text-left font-semibold sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl sm:pr-0 md:pr-12 lg:pr-12 xl:pr-12  mb-10 sm:w-full md:w-full lg:w-3/4 xl:w-2/4 antialiased">
       Solving real-world challenges with smart, life-enhancing solutions
     </p>

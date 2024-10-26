@@ -5,7 +5,7 @@ const ShowcaseProject = () => {
   return (
     <>
       <div className="lg:mt-24 lg:ml-28 mt-12 ml-4 mr-4 lg:mr-28 lg:mb-24">
-        <h1 className="font-poppins text-[#51B504] text-sm lg:text-lg font-medium lg:font-semibold ">
+        <h1 className="font-poppins text-[#51B504] text-sm lg:text-xl font-medium lg:font-semibold ">
           OUR PROJECTS
         </h1>
         <h2 className="hidden lg:block font-bold text-xl lg:text-3xl   lg:mt-8">

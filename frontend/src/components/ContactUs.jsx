@@ -2,20 +2,16 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <div className='py-[80px] px-[2rem] w-screen flex items-center justify-center  mb-8'>
+    <div className='py-[80px] px-[2rem]  w-screen flex items-center justify-center  mb-8'>
     <div className="w-full  max-w-md mx-2">
     <div>
-      <p
-        className=" text-[#51B504] text-center poppins-thin font-medium  leading-[24px]
-      pb-[10px]   sm:text-base sm:font-[20px] sm:leading-[20px]
-       "
-      >
-        Contact us
-      </p>
-      <h2 className="text-center text-[#130F26] text-[24px] interfont font-medium  mb-1 leading-[32px] sm:text-4xl sm:leading-[36px]  sm:font-semibold">
+    <h1 className="font-poppins text-[#51B504] text-sm lg:text-xl font-medium lg:font-semibold text-center my-8">
+          CONTACT US
+        </h1>
+      <h2 className="flex w-screen text-center text-[#130F26] text-[24px]  font-medium  mb-1 leading-[32px] sm:text-4xl sm:leading-[36px]  sm:font-semibold">
         We&apos;d love to hear from you
       </h2>
-      <h2 className="text-center text-[#130F26] text-[24px] interfont font-medium  sm:mb-[44px] mb-[24px] leading-[32px] sm:text-4xl sm:leading-[36px]  sm:font-semibold">
+      <h2 className="text-center text-[#130F26] text-[24px]  font-medium  sm:mb-[44px] mb-[24px] leading-[32px] sm:text-4xl sm:leading-[36px]  sm:font-semibold">
         Please fill out this form
       </h2>
     </div>

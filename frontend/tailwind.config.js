@@ -6,8 +6,7 @@ module.exports = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   fontFamily: {
-    poppins: ['Poppins', 'sans-serif'],
-    inter: ['Inter', 'sans-serif'],
+    sans: ['Inter', 'Poppins', 'ui-sans-serif', 'system-ui'],
   },
   theme: {
     extend: {

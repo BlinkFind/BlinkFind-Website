@@ -85,9 +85,9 @@ const OurTeam = () => {
     <section className="py-12 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-left">
-          <h4 className="text-base font-semibold text-green-400 tracking-wide uppercase">
-            Our Team
-          </h4>
+        <h1 className="font-poppins text-[#51B504] my-8 4 text-sm lg:text-xl font-medium lg:font-semibold ">
+          OUR TEAM
+        </h1>
           <h4 className="mt-2 text-3xl font-extrabold text-gray-900">
             Meet The Team Driving Our Growth</h4>
             <h4 className="mt-2 text-3xl font-extrabold text-gray-900">

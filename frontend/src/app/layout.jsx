@@ -12,15 +12,7 @@ const geistMono = localFont({
   weight: "100 900",
 });
 
-// const poppins = Poppins({
-//   weight: ['400', '500', '700'],  // Define the font weights you need
-//   subsets: ['latin'],
-// });
 
-// const inter = Inter({
-//   weight: ['400', '500', '700'],
-//   subsets: ['latin'],
-// });
 
 export const metadata = {
   title: "QuickFinds",
@@ -30,8 +22,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@400;600&display=swap"
+          rel="stylesheet"
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className='className="font-sans"'
       >
         {children}
       </body>
