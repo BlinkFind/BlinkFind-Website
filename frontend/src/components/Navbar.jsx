@@ -57,7 +57,7 @@ const Navbar = () => {
   )
 
   return (
-    <div className='bg-[#D1FFD1] w-screen'>
+    <div className='bg-[#D1FFD1] w-screen fixed z-10'>
       <nav className="flex justify-between items-center h-[80px] w-[80vw] xs:w-[90vw] mx-auto">
         <div className="flex items-center relative">
           <img src="/HeroImages/img/Logo.png" alt="Logo" />
