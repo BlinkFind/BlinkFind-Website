@@ -8,8 +8,10 @@ import ShowcaseProject from "@/components/ShowcaseProject";
 
 export default function Home() {
   return (
-    <div>
-      <Navbar/>
+    <>
+    <Navbar/>
+    <div className="pt-[80px]">
+      
       <Hero />
       <Categories />
       <ShowcaseProject />
@@ -17,5 +19,6 @@ export default function Home() {
       <ContactUs />
       <Footer />
     </div>
+    </>
   );
 }
