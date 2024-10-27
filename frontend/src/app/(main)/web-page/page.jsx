@@ -139,7 +139,7 @@ export default function WebDevelopment() {
 
         <section className="bg-[#3B82F6] text-white p-12 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold mb-4">Ready to Build Your Dynamic Website?</h2>
-          <p className="text-xl mb-8">Let's create something remarkable together. Get in touch with us today to start your web development journey!</p>
+          <p className="text-xl mb-8">Let&apos;s create something remarkable together. Get in touch with us today to start your web development journey!</p>
           <a href='/#Contact Us' className="bg-white text-[#3B82F6] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors inline-flex items-center">
             Get Started
             <ArrowRight className="ml-2" />
