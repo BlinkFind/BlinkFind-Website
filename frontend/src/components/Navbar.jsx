@@ -67,10 +67,10 @@ const Navbar = () => {
   )
 
   return (
-    <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10">
+    <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10 ">
       <nav className="flex justify-between items-center h-[80px] max-w-full px-4 mx-auto">
         <div className="flex items-center relative">
-          <img src="/HeroImages/img/Logo.png" alt="Logo" />
+          <img src="/logo.svg" alt="Logo" />
           <span className="font-poppins text-lg font-bold leading-[30px] text-left text-[#022E50]">
             Quick
           </span>

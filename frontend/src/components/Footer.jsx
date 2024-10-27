@@ -18,18 +18,21 @@ const Footer = () => {
             shape a better future.
           </p>
           <div className="flex space-x-4 mt-4">
-            <a href="#" className='bg-[#51B504] p-[11px] rounded-full'>
+            <a href="https://www.facebook.com/people/QuickFind/61566368033281/" className='bg-[#51B504] p-[11px] rounded-full'>
               <img src="/FooterImages/facebook.svg" alt="Facebook" className="w-5 h-5" />
             </a>
-            <a href="#" className='bg-[#51B504] p-[11px] rounded-full'>
+            <a href="https://x.com/QucikFind" className='bg-[#51B504] p-[11px] rounded-full'>
               <img src="/FooterImages/twitter.svg" alt="Twitter" className="w-5 h-5" />
             </a>
-            <a href="#" className='bg-[#51B504] p-[11px] rounded-full'>
+            <a href="https://www.linkedin.com/company/quickfinding" className='bg-[#51B504] p-[11px] rounded-full'>
               <img src="/FooterImages/linkedin.svg" alt="LinkedIn" className="w-5 h-5" />
             </a>
-            <a href="#" className='bg-[#51B504] p-[11px] rounded-full'>
+            <a href="https://www.instagram.com/quick_find_app" className='bg-[#51B504] p-[11px] rounded-full'>
               <img src="/FooterImages/instagram.svg" alt="Instagram" className="w-5 h-5" />
             </a>
+            {/* <a href="https://www.youtube.com/@QuickFinding" className='bg-[#51B504] p-[11px] rounded-full'>
+              <img src="/FooterImages/instagram.svg" alt="Youtube" className="w-5 h-5" />
+            </a> */}
           </div>
           <p className="mt-16 text-gray-700 text-center md:text-left">
             © 2024 QuickFinds. All rights reserved.
@@ -39,22 +42,25 @@ const Footer = () => {
         <div className="flex-1 flex flex-col lg:pl-48 items-center md:items-start">
           <h3 className="text-xl font-bold mb-4">Quick Links</h3>
           <ul className="space-y-3">
-            <li><a href="#" className="text-gray-700 hover:underline">Home</a></li>
-            <li><a href="#" className="text-gray-700 hover:underline">About Us</a></li>
-            <li><a href="#" className="text-gray-700 hover:underline">Our Expertise</a></li>
-            <li><a href="#" className="text-gray-700 hover:underline">Our Projects</a></li>
-            <li><a href="#" className="text-gray-700 hover:underline">Contact Us</a></li>
+            <li><a href="#Home" className="text-gray-700 hover:underline">Home</a></li>
+            <li><a href="/aboutus" className="text-gray-700 hover:underline">About Us</a></li>
+            <li><a href="#Services" className="text-gray-700 hover:underline">Our Expertise</a></li>
+            <li><a href="#Projects" className="text-gray-700 hover:underline">Our Projects</a></li>
+            <li><a href="#Contact Us" className="text-gray-700 hover:underline">Contact Us</a></li>
           </ul>
         </div>
         {/* Third column: Address */}
         <div className="flex-1 flex flex-col items-center md:items-start lg:pl-4">
           <h3 className="text-xl font-bold mb-4">Address</h3>
+
+
+
           <p className="text-gray-700 text-center md:text-left">
-            Design Agency Head Office
+          QuickFinds Head Office
             <br />
-            Airport Road
+            Near Ryan International School
             <br />
-            United Arab Emirates
+            India
           </p>
           <div className="mt-32 text-gray-700">
             <a href="#" className="hover:underline">Privacy</a>{" "}

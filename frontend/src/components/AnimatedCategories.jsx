@@ -73,7 +73,7 @@ const Categories1 = () => {
     {
       icon: './CategoriesImages/icons/ic_sharp-security.svg',
       title: 'Cyber Security',
-      description: 'Providing robust security solutions to protect your digital assets and streamlinge client.',
+      description: 'Protecting and providing your assets with advanced and proactive cybersecurity strategies.',
     },
   ];
 
