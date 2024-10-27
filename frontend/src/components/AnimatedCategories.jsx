@@ -2,18 +2,19 @@
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link"; // Import Link from Next.js
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const CategoryCard = ({ iconSrc, title, description }) => (
-    <div className="bg-[#EFF8E9] mb-4 pb-6 px-6 pt-10 text-left hover:shadow-xl transition h-auto rounded-[30px]">
-      {/* Adjusted the icon container to align left */}
-      <div className="bg-[#D1FFD1] p-4 rounded-[15px] w-[90px] flex justify-center items-center mb-4">
-        <img src={iconSrc} alt={`${title} Icon`} className="icon m-2 h-10" />
-      </div>
-      <h3 className="text-2xl font-semibold my-2 text-left pt-2">{title}</h3>
-      <p className="mb-[3rem] text-left text-lg pt-3">{description}</p>
+const CategoryCard = ({ iconSrc, title, description, href }) => (
+  <div className="bg-[#EFF8E9] mb-4 pb-6 px-6 pt-10 text-left hover:shadow-xl transition h-auto rounded-[30px]">
+    <div className="bg-[#D1FFD1] p-4 rounded-[15px] w-[90px] flex justify-center items-center mb-4">
+      <img src={iconSrc} alt={`${title} Icon`} className="icon m-2 h-10" />
+    </div>
+    <h3 className="text-2xl font-semibold my-2 text-left pt-2">{title}</h3>
+    <p className="mb-[3rem] text-left text-lg pt-3">{description}</p>
+    <Link href={href}>
       <button className="text-black hover:text-white mt-10 px-5 p-4 rounded-lg flex items-center hover:bg-blue-500 transition text-lg hover:shadow-lg hover:shadow-blue-500/50">
         Learn More
         <img
@@ -22,9 +23,10 @@ const CategoryCard = ({ iconSrc, title, description }) => (
           className="arrow-right w-6 ml-2 mt-1 align-middle"
         />
       </button>
-    </div>
-  );
-  
+    </Link>
+  </div>
+);
+
 const Categories1 = () => {
   const [slidesToShow, setSlidesToShow] = useState(3);
 
@@ -49,31 +51,19 @@ const Categories1 = () => {
       icon: './CategoriesImages/icons/catppuccin_android.svg',
       title: 'Android Development',
       description: 'Custom Android apps that boost user engagement and accelerate client growth.',
+      href : '/android-page',
     },
     {
       icon: './CategoriesImages/icons/Vector.svg',
       title: 'Web Development',
       description: 'Delivering dynamic websites that drive client success and user satisfaction.',
-    },
-    {
-      icon: './CategoriesImages/icons/bx_edit.svg',
-      title: 'UI/UX Design',
-      description: 'Creating intuitive and engaging user experiences for web and mobile applications.',
+      href : '/web-page',
     },
     {
       icon: './CategoriesImages/icons/ph_open-ai-logo.svg',
       title: 'Artificial Intelligence',
       description: 'Implementing smart solutions that enhance decision-making and efficiency.',
-    },
-    {
-      icon: './CategoriesImages/icons/clarity_block-solid.svg',
-      title: 'Blockchain Solutions',
-      description: 'Offering blockchain solutions that secure and streamline client transactions.',
-    },
-    {
-      icon: './CategoriesImages/icons/ic_sharp-security.svg',
-      title: 'Cyber Security',
-      description: 'Protecting and providing your assets with advanced and proactive cybersecurity strategies.',
+      href: '/ai-page',
     },
   ];
 
@@ -112,7 +102,6 @@ const Categories1 = () => {
         <p className="text-left font-semibold sm:text-4xl md:text-3xl lg:text-3xl xl:text-3xl mb-10 sm:w-full md:w-full lg:w-3/4 xl:w-2/4 antialiased">
           Solving real-world challenges with smart, life-enhancing solutions
         </p>
-        {/* Expertise Slider */}
         <Slider {...settings} className="team-carousel">
           {categories.map((category, index) => (
             <CategoryCard
@@ -120,6 +109,7 @@ const Categories1 = () => {
               iconSrc={category.icon}
               title={category.title}
               description={category.description}
+              href={category.href} // Pass href to CategoryCard
             />
           ))}
         </Slider>
@@ -129,3 +119,21 @@ const Categories1 = () => {
 };
 
 export default Categories1;
+
+
+
+  //   icon: './CategoriesImages/icons/bx_edit.svg',
+  //   title: 'UI/UX Design',
+  //   description: 'Creating intuitive and engaging user experiences for web and mobile applications.',
+  // },
+ 
+  // {
+  //   icon: './CategoriesImages/icons/clarity_block-solid.svg',
+  //   title: 'Blockchain Solutions',
+  //   description: 'Offering blockchain solutions that secure and streamline client transactions.',
+  // },
+  // {
+  //   icon: './CategoriesImages/icons/ic_sharp-security.svg',
+  //   title: 'Cyber Security',
+  //   description: 'Protecting and providing your assets with advanced and proactive cybersecurity strategies.',
+  // },
