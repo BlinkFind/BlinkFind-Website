@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
@@ -21,103 +21,127 @@ const OurTeam1 = () => {
     };
 
     handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const teamMembers = [
     {
-      name: "Ansh Kumar",
-      role: "UI/UX Designer",
-      imageSrc: "/OurTeamImages/profile.jpg",
+      name: "Faiz Ur Rehman",
+      role: "Web Developer",
+      imageSrc: "/OurTeamImages/avatar/faiz.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
+        instagram: "/OurTeamImages/instagram.svg",
+        facebook: "/OurTeamImages/facebook.svg",
+      },
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/faiz-ur-rehman-400b36247",
+        instagram: "https://www.instagram.com/iamfaiiizzzz/",
+        facebook: "https://m.facebook.com/100069625092320/",
+      },
+      description:
+        "Hi, I’m a Full Stack Developer and freelancer, focused on delivering top-quality web solutions for clients.",
+    },
+    // Add more members as needed...
+    {
+      name: "Nitendra Singh",
+      role: "Marketing Lead",
+      imageSrc: "/OurTeamImages/avatar/nitendra.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
+        instagram: "/OurTeamImages/instagram.svg",
+        facebook: "/OurTeamImages/facebook.svg",
+      },
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/nitendra-singh-66018225b",
+        instagram:
+          "https://www.instagram.com/nitendra__here___?igsh=YzljYTk1ODg3Zg==",
+        facebook:
+          "https://www.facebook.com/share/nF5RyqiTx4qQjCVS/?mibextid=qi2Omg",
+      },
+      description:
+        "Hi, I'm a Marketing lead at QuickFinds and a CSE final year student building my career in software development.",
+    },
+    {
+      name: "Meeran Husain",
+      role: "Front-end Web developer",
+      imageSrc: "/OurTeamImages/avatar/meeran.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
+        instagram: "/OurTeamImages/instagram.svg",
+      },
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/meeran-husain/",
+        instagram:
+          "https://www.instagram.com/sk_meeran07?igsh=MWZtMXM5bXhmcnMyOQ==",
+      },
+      description:
+        "I’m a front-end web developer who enjoys crafting engaging and user-friendly websites.",
+    },
+    {
+      name: "Abdullah Khan",
+      role: "Android Lead",
+      imageSrc: "/OurTeamImages/avatar/abdullah.jpg", // Replace with your local image
       social: {
         linkedin: "/OurTeamImages/linkedin.svg",
         instagram: "/OurTeamImages/instagram.svg",
         facebook: "/OurTeamImages/facebook.svg",
         github: "/OurTeamImages/github.svg",
       },
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/abdullahkhanspn/",
+        instagram: "https://www.instagram.com/abdullahkhanspn4",
+        facebook: "https://www.facebook.com/profile.php?id=100006949605682",
+        github: "https://github.com/Abdullahkhanspn",
+      },
+
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+        "As the founder of QuickFinds, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
     },
-    // ... (repeat for all 6 team members)
     {
-        name: "arsalan",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      name: "Hamza Khan",
+      role: "Penetration Tester",
+      imageSrc: "/OurTeamImages/avatar/hamzah.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
+        instagram: "/OurTeamImages/instagram.svg",
+        facebook: "/OurTeamImages/facebook.svg",
       },
-      {
-        name: "AMeeran",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      socialLinks: {
+        linkedin: "www.linkedin.com/in/hamzakhanspn",
+        instagram: "https://www.instagram.com/hamzakhan7437/",
+        facebook: "https://www.facebook.com/profile.php?id=100014188171817",
       },
-      {
-        name: "Faiz",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      description:
+        "Experienced penetration tester committed to securing websites and applications through vulnerability analysis",
+    },
+    {
+      name: "Abdul Arslan",
+      role: "UI/UX Designer",
+      imageSrc: "/OurTeamImages/avatar/arslan.png", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
       },
-      {
-        name: "Abdullah",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/abdul-arslan-9014b7227/",
       },
-      {
-        name: "Saddique",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      description:
+        "Final-year student with 1.5 years of UX/UI design experience from internships, personal projects, and freelance work",
+    },
+    {
+      name: "Mandavi Vajpayee",
+      role: "HR Manager",
+      imageSrc: "/OurTeamImages/avatar/vajpayee.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
       },
-      {
-        name: "Jasim",
-        role: "UI/UX Designer",
-        imageSrc: "/OurTeamImages/profile.jpg",
-        social: {
-          linkedin: "/OurTeamImages/linkedin.svg",
-          instagram: "/OurTeamImages/instagram.svg",
-          facebook: "/OurTeamImages/facebook.svg",
-          github: "/OurTeamImages/github.svg",
-        },
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor eiusmod tempor.",
+      socialLinks: {
+        linkedin: "www.linkedin.com/in/mandavi-vajpayee",
       },
+      description:
+        "HR professional with experience in talent management, employee engagement, and communication training",
+    },
   ];
 
   const settings = {
@@ -134,16 +158,16 @@ const OurTeam1 = () => {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-        }
+        },
       },
       {
         breakpoint: 640,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
@@ -176,28 +200,33 @@ const OurTeam1 = () => {
                     <h3 className="text-2xl font-semibold text-black">
                       {member.name}
                     </h3>
-                    <p className="text-black mt-2 font-semibold">{member.role}</p>
+                    <p className="text-black mt-2 font-semibold">
+                      {member.role}
+                    </p>
                     <p className="mt-1 text-black">{member.description}</p>
                   </div>
 
                   <div className="flex space-x-4 items-center mt-4">
-                    {Object.entries(member.social).map(([platform, src]) => (
-                      <a
-                        key={platform}
-                        href={`https://${platform}.com`}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-7 h-7"
-                      >
-                        <Image
-                          src={src}
-                          alt={platform}
-                          width={28}
-                          height={28}
-                          className="object-cover"
-                        />
-                      </a>
-                    ))}
+                    {Object.entries(member.social).map(
+                      ([platform, src]) =>
+                        member.socialLinks[platform] && ( // Check if link is available
+                          <a
+                            key={platform}
+                            href={member.socialLinks[platform]}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-7 h-7"
+                          >
+                            <Image
+                              src={src}
+                              alt={platform}
+                              width={28}
+                              height={28}
+                              className="object-cover"
+                            />
+                          </a>
+                        )
+                    )}
                   </div>
                 </div>
               </div>

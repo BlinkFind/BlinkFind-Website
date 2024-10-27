@@ -1,6 +1,6 @@
 import Categories1 from "@/components/AnimatedCategories";
 import OurTeam1 from "@/components/AnimatedOurTeam";
-import Categories from "@/components/Categories";
+import Categories from "@/components/OldCategories";
 import ContactUs from "@/components/ContactUs";
 import Footer from "@/components/Footer";
 import Hero from "@/components/Hero";
