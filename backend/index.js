@@ -10,9 +10,10 @@ const port = 5000;
 // Middleware to parse JSON and set CORS headers
 app.use(express.json()); // Moved this line up to ensure JSON parsing
 app.use(cors({
-    origin: ['https://quick-finds.vercel.app'],
+    origin: 'https://quick-finds.vercel.app', // Ensure this matches your frontend URL
+    methods: ['GET', 'POST', 'DELETE'], // Add any methods you need
+    credentials: true, // If you're using cookies or HTTP authentication
 }));
-
 // Defining routes
 app.use('/user', UserRouter);
 app.use("/contact", ContactUsRouter);
