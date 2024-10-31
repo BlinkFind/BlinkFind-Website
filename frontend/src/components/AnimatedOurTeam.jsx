@@ -27,6 +27,25 @@ const OurTeam1 = () => {
 
   const teamMembers = [
     {
+      name: "Md Sadique",
+      role: "Frontend developer",
+      imageSrc: "/OurTeamImages/avatar/sadique.jpg", // Replace with your local image
+      social: {
+        linkedin: "/OurTeamImages/linkedin.svg",
+        instagram: "/OurTeamImages/instagram.svg",
+        facebook: "/OurTeamImages/facebook.svg",
+        github: "/OurTeamImages/github.svg",
+      },
+      socialLinks: {
+        linkedin: "https://www.linkedin.com/in/mdsadique5",
+        instagram: "https://www.instagram.com/mdsadique508/",
+        facebook: "https://www.facebook.com/mdsadique508/",
+        github: "https://github.com/sadique-2004",
+      },
+      description:
+        "Dedicated to building interactive and responsive interfaces with a passion for delivering clean and efficient design",
+    },
+    {
       name: "Faiz Ur Rehman",
       role: "Web Developer",
       imageSrc: "/OurTeamImages/avatar/faiz.jpg", // Replace with your local image
