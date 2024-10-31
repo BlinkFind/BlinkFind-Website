@@ -64,10 +64,10 @@ const ContactUs = () => {
             Contact Us
           </h3>
           <h2 className="text-2xl sm:text-4xl font-bold text-[#130F26] mb-4">
-            We'd love to hear from you
+            We&apos;d love to hear from you
           </h2>
           <p className="text-lg text-[#4A5568] max-w-2xl mx-auto">
-            Have a question or want to know more? Fill out the form below and we'll get back to you shortly.
+            Have a question or want to know more? Fill out the form below and we&apos;ll get back to you shortly.
           </p>
         </div>
         <form className="mt-8 space-y-6" onSubmit={handleSubmit}>

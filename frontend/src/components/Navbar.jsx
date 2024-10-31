@@ -7,7 +7,12 @@ const Navbar = () => {
   const [activeItem, setActiveItem] = useState("Home");
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const role = localStorage.getItem('role');
+  const [role, setRole] = useState(null);
+
+  useEffect(() => {
+    const storedRole = localStorage.getItem('role');
+    setRole(storedRole);
+  }, []);
   const user = { role };
   const handleNavItemClick = (item) => {
     setActiveItem(item);
