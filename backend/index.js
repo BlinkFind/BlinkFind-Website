@@ -10,13 +10,14 @@ const port = 5000;
 // Middleware to parse JSON and set CORS headers
 app.use(express.json()); // Moved this line up to ensure JSON parsing
 app.use(cors({
-    origin: ['https://quick-finds.vercel.app/'],
+    origin: ['https://quick-finds.vercel.app'],
 }));
 
 // Defining routes
 app.use('/user', UserRouter);
 app.use("/contact", ContactUsRouter);
 
-app.listen(port, () => {
-    console.log('Server started on port', port); 
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server started on port ${PORT}`);
 });
