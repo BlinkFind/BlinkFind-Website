@@ -30,6 +30,8 @@ const Login = () => {
       password: ""
     },
     onSubmit: (values) => {
+      console.log(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`);
+
       axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`, values)
         .then((result) => {
           toast.success('Login Success');
