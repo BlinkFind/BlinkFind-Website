@@ -1,6 +1,7 @@
 const express = require('express');
 const UserRouter = require('./routers/UserRouter');
 const cors = require('cors');
+const ContactUsRouter = require("./routers/ContactUsRouter");
 
 // Initializing express
 const app = express();
@@ -14,6 +15,7 @@ app.use(cors({
 
 // Defining routes
 app.use('/user', UserRouter);
+app.use("/contact", ContactUsRouter);
 
 app.listen(port, () => {
     console.log('Server started on port', port); 

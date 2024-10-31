@@ -1,47 +1,53 @@
-'use client'
+"use client";
 
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link'
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
 
 const Navbar = () => {
-  const [activeItem, setActiveItem] = useState('Home')
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false)
+  const [activeItem, setActiveItem] = useState("Home");
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const handleItemClick = (item) => {
-    setActiveItem(item)
-    setIsSidebarOpen(false)
-  }
+  const role = localStorage.getItem('role');
+  const user = { role };
+  const handleNavItemClick = (item) => {
+    setActiveItem(item);
+    setIsSidebarOpen(false);
+  };
 
   const navItems = [
-    { name: 'Home', href: '#Home' },
-    { name: 'About Us', href: '/aboutus' }, // Change href to point to About Us page
-    { name: 'Services', href: '#Services' },
-    { name: 'Projects', href: '#Projects' },
-    { name: 'Contact Us', href: '#Contact Us' },
-    { name: 'Login', href: '/login' },
-  ]
+    { name: "Home", href: "#Home" },
+    { name: "About Us", href: "/aboutus" },
+    { name: "Services", href: "#Services" },
+    { name: "Projects", href: "#Projects" },
+    { name: "Contact Us", href: "#Contact Us" },
+    { name: "Login", href: "/login" },
+  ];
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 639) {
-        setIsSidebarOpen(false)
+        setIsSidebarOpen(false);
       }
-    }
+    };
 
-    window.addEventListener('resize', handleResize)
-    return () => window.removeEventListener('resize', handleResize)
-  }, [])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  console.log("User from local storage:", user);
+console.log("User role:", user ? user.role : "No user found");
 
   const Sidebar = () => (
-    <div 
+    <div
       className={`fixed top-0 left-0 h-full w-[250px] bg-[#D1FFD1] transform transition-transform duration-300 ease-in-out z-50 ${
-        isSidebarOpen ? 'translate-x-0' : '-translate-x-full'
+        isSidebarOpen ? "translate-x-0" : "-translate-x-full"
       }`}
     >
       <div className="p-4">
-        <button 
+        <button
           onClick={() => setIsSidebarOpen(false)}
           className="text-[#022E50] font-bold text-xl mb-4"
+          aria-label="Close Sidebar"
         >
           &times;
         </button>
@@ -51,20 +57,30 @@ const Navbar = () => {
               key={name}
               href={href}
               className={`p-2 rounded-[10px] ${
-                activeItem === name ? 'bg-[#51B504] text-[#FFFFFF]' : 'text-[#022E50]'
+                activeItem === name
+                  ? "bg-[#51B504] text-[#FFFFFF]"
+                  : "text-[#022E50]"
               }`}
               onClick={() => {
-                handleItemClick(name)
-                if (name !== 'About Us') setIsSidebarOpen(false); // Close sidebar if not About Us
+                handleNavItemClick(name);
+                if (name !== "About Us") setIsSidebarOpen(false);
               }}
             >
               {name}
             </Link>
           ))}
+          {user && user.role === "admin" && (
+            <Link
+              href="/admin/contact-forms"
+              className="p-2 rounded-[10px] text-[#022E50]"
+            >
+              Contact Forms
+            </Link>
+          )}
         </nav>
       </div>
     </div>
-  )
+  );
 
   return (
     <div className="bg-[#D1FFD1] w-full overflow-x-hidden fixed z-10 ">
@@ -83,34 +99,48 @@ const Navbar = () => {
             <li
               key={name}
               className={`lg:p-[10px] sm:p-[6px] ${
-                activeItem === name ? 'bg-[#51B504] text-[#FFFFFF] rounded-[10px]' : ''
+                activeItem === name
+                  ? "bg-[#51B504] text-[#FFFFFF] rounded-[10px]"
+                  : ""
               }`}
               onClick={() => {
-                handleItemClick(name)
-                if (name !== 'About Us') setIsSidebarOpen(false); // Close sidebar if not About Us
+                handleNavItemClick(name);
+                if (name !== "About Us") setIsSidebarOpen(false);
               }}
             >
-              <Link href={href} scroll={true}>
+              <Link href={href} scroll={true} passHref>
                 {name}
               </Link>
             </li>
           ))}
+       {user && user.role === "admin" && (
+            <Link
+              href="/admin/contact-forms"
+              className="p-2 rounded-[10px] text-[#022E50]"
+            >
+              Contact Forms
+            </Link>
+          )}
         </ul>
         <div className="hidden xs:block">
-          <button onClick={() => setIsSidebarOpen(true)} className="focus:outline-none">
+          <button
+            onClick={() => setIsSidebarOpen(true)}
+            className="focus:outline-none"
+            aria-label="Open Sidebar"
+          >
             <img src="/HeroImages/img/Vector.png" alt="Menu" />
           </button>
         </div>
       </nav>
       <Sidebar />
       {isSidebarOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40"
           onClick={() => setIsSidebarOpen(false)}
         ></div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

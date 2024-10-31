@@ -2,6 +2,9 @@ const express = require("express");
 const Model = require("../models/UserModel");
 const jwt = require("jsonwebtoken");
 require("dotenv").config();
+const verifyToken = require('../middlewares/verifyToken'); // Adjust the path as necessary
+const verifyAdmin = require('../middlewares/verifyAdmin'); // Adjust the path as necessary
+
 
 //initialize
 const router = express.Router();
@@ -97,35 +100,31 @@ router.put("/update/:id", (req, res) => {
 
 router.post("/authenticate", (req, res) => {
   Model.findOne(req.body)
-    .then((result) => {
-      if (result) {
-        //JWT to generate and verify the token and .env is used
-        //payload , secretkey, expiry
-
-        const { _id, email, password } = result;
-        const payload = { _id, email, password };
-        jwt.sign(
-          payload,
-          process.env.JWT_SECRET,  // Remove quotes around process.env.JWT_SECRET
-          { expiresIn: "1h" },
-          (err, token) => {
-            if (err) {
-              console.log(err);
-              res.status(500).json(err);
-            } else {
-              res.status(200).json({ token });
-            }
+      .then((result) => {
+          if (result) {
+              const { _id, email, password, role } = result; // Include role
+              const payload = { _id, email, role }; // Include role in payload
+              jwt.sign(
+                  payload,
+                  process.env.JWT_SECRET,
+                  { expiresIn: "1h" },
+                  (err, token) => {
+                      if (err) {
+                          console.log(err);
+                          res.status(500).json(err);
+                      } else {
+                          res.status(200).json({ token, role }); // Send role with token
+                      }
+                  }
+              );
+          } else {
+              res.status(401).json({ message: "Invalid Credentials" });
           }
-        );
-        
-      } else {
-        res.status(401).json({ message: "Invalid Credentials" });
-      }
-    })
-    .catch((err) => {
-      console.log(err);
-      res.status(500).json(err);
-    });
+      })
+      .catch((err) => {
+          console.log(err);
+          res.status(500).json(err);
+      });
 });
 
 module.exports = router;

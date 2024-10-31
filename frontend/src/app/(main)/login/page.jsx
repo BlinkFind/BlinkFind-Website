@@ -1,25 +1,50 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Image from "next/image";
-import Link from "next/link";
+import React, { useState } from 'react';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
+import axios from 'axios';
+import toast from 'react-hot-toast';
+import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 
-const CompactLogin = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
+// Yup validation schema for formik
+const LoginSchema = Yup.object().shape({
+  email: Yup.string().email("Invalid email").required("Required"),
+  password: Yup.string()
+    .required("Please Enter your password")
+    .matches(
+      /^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*#?&])[A-Za-z\d@$!%*#?&]{8,}$/,
+      "Must contain 8 characters, one uppercase, one lowercase, one number, and one special character"
+    )
+});
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    if (!email || !password) {
-      setError("Please fill in all fields");
-      return;
-    }
-    console.log("Login attempt with:", { email, password });
-    setEmail("");
-    setPassword("");
-    setError("");
-  };
+const Login = () => {
+  const router = useRouter();
+  const [error, setError] = useState('');
+
+  const loginForm = useFormik({
+    initialValues: {
+      email: "",
+      password: ""
+    },
+    onSubmit: (values) => {
+      axios.post(`${process.env.NEXT_PUBLIC_API_URL}/user/authenticate`, values)
+        .then((result) => {
+          toast.success('Login Success');
+          localStorage.setItem('token', result.data.token);
+          // Assuming your response includes the user's role
+          localStorage.setItem('role', result.data.role); // Save user role
+          router.push('/');
+        })
+        .catch((err) => {
+          setError(err.response?.data?.message || 'Login failed');
+          toast.error(err.response?.data?.message || 'Login failed'); // Display the error message from the response
+        });
+    },
+    validationSchema: LoginSchema
+  });
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#E8FFF1] to-[#F8FFF8] flex flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -27,138 +52,69 @@ const CompactLogin = () => {
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
           <div className="flex justify-center mb-6">
             <div className="w-24 h-24 relative">
-              <Image
-                src="logo.svg"
-                alt="QuickFinds Logo"
-                layout="fill"
-                objectFit="contain"
-               
-              />
+              <Image src="logo.svg" alt="QuickFinds Logo" layout="fill" objectFit="contain" />
             </div>
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-[#130F26] mb-6">
             Welcome Back
           </h2>
-          <form className="space-y-6" onSubmit={handleSubmit}>
+          <form className="space-y-6" onSubmit={loginForm.handleSubmit}>
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-[#130F26]"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-[#130F26]">
                 Email address
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg
-                    className="h-5 w-5 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-                  </svg>
-                </div>
                 <input
                   id="email"
                   name="email"
                   type="email"
                   autoComplete="email"
-                  required
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  className="focus:ring-[#51B504] focus:border-[#51B504] block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  value={loginForm.values.email}
+                  onChange={loginForm.handleChange}
+                  className="focus:ring-[#51B504] focus:border-[#51B504] py-1 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
                   placeholder="you@example.com"
                 />
+                {loginForm.touched.email && loginForm.errors.email && (
+                  <p className="text-xs text-red-600 mt-2">{loginForm.errors.email}</p>
+                )}
               </div>
             </div>
 
             <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-[#130F26]"
-              >
+              <label htmlFor="password" className="block text-sm font-medium text-[#130F26]">
                 Password
               </label>
               <div className="mt-1 relative rounded-md shadow-sm">
-                <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                  <svg
-                    className="h-5 w-5 text-gray-400"
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                    aria-hidden="true"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z"
-                      clipRule="evenodd"
-                    />
-                  </svg>
-                </div>
                 <input
                   id="password"
                   name="password"
                   type="password"
                   autoComplete="current-password"
-                  required
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                  className="focus:ring-[#51B504] focus:border-[#51B504] block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
-                  placeholder="••••••••"
+                  value={loginForm.values.password}
+                  onChange={loginForm.handleChange}
+                  className="focus:ring-[#51B504] focus:border-[#51B504] py-1 block w-full pl-10 sm:text-sm border-gray-300 rounded-md"
+                  placeholder="Password"
                 />
+                {loginForm.touched.password && loginForm.errors.password && (
+                  <p className="text-xs text-red-600 mt-2">{loginForm.errors.password}</p>
+                )}
               </div>
             </div>
 
-            <div className="flex items-center justify-between">
-              <div className="flex items-center">
-                <input
-                  id="remember-me"
-                  name="remember-me"
-                  type="checkbox"
-                  className="h-4 w-4 text-[#51B504] focus:ring-[#51B504] border-gray-300 rounded"
-                />
-                <label
-                  htmlFor="remember-me"
-                  className="ml-2 block text-sm text-[#4A5568]"
-                >
-                  Remember me
-                </label>
-              </div>
+            {error && <p className="text-xs text-red-600 mt-2 text-center">{error}</p>}
 
-              <div className="text-sm">
-                <Link
-                  href="/forgot-password"
-                  className="font-medium text-[#51B504] hover:text-[#45A003] transition-colors duration-300"
-                >
-                  Forgot your password?
-                </Link>
-              </div>
-            </div>
-
-            {error && (
-              <div className="text-red-600 text-sm bg-red-50 border border-red-200 rounded-md p-2">
-                {error}
-              </div>
-            )}
-
-            <div>
-              <button
-                type="submit"
-                className="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-gradient-to-r from-[#51B504] to-[#45A003] hover:from-[#45A003] hover:to-[#51B504] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#51B504] transition-all duration-300 transform hover:scale-105"
-              >
-                Sign in
-              </button>
-            </div>
-          </form>
-          <p className="mt-6 text-center text-sm text-[#4A5568]">
-            Don&apos;t have an account?{" "}
-            <Link
-              href="/signup"
-              className="font-medium text-[#51B504] hover:text-[#45A003] transition-colors duration-300"
+            <button
+              type="submit"
+              className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-[#51B504] hover:bg-[#3c8e04] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#51B504]"
             >
-              Sign up now
+              Sign In
+            </button>
+          </form>
+
+          <p className="mt-6 text-xs text-gray-600 text-center">
+            Not registered yet?{' '}
+            <Link href="/signup" className="border-b text-blue-400 border-gray-500 border-dotted">
+              Sign Up
             </Link>
           </p>
         </div>
@@ -167,4 +123,4 @@ const CompactLogin = () => {
   );
 };
 
-export default CompactLogin;
+export default Login;
