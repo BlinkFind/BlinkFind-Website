@@ -16,8 +16,8 @@ const geistMono = localFont({
 
 
 export const metadata = {
-  title: "QuickFinds",
-  description: "QuickFinds is transforming into a cutting-edge startup dedicated to identifying and solving realworld problems through innovative solutions. Our focus is on addressing challenges faced by users, businesses, and communities by developing faster, more secure, and optimized applications, websites, AI-driven solutions, and more.",
+  title: "BlinkFind",
+  description: "BlinkFind is transforming into a cutting-edge startup dedicated to identifying and solving realworld problems through innovative solutions. Our focus is on addressing challenges faced by users, businesses, and communities by developing faster, more secure, and optimized applications, websites, AI-driven solutions, and more.",
 };
 
 export default function RootLayout({ children }) {

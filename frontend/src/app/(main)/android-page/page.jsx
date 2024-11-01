@@ -32,7 +32,7 @@ export default function AndroidDevelopment() {
       <header className="bg-[#51B504] text-white py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Android Development Expertise</h1>
-          <p className="text-xl max-w-2xl">Building innovative solutions for real-world impact with QuickFinds</p>
+          <p className="text-xl max-w-2xl">Building innovative solutions for real-world impact with BlinkFind</p>
         </div>
       </header>
 
@@ -107,7 +107,7 @@ export default function AndroidDevelopment() {
         </section>
 
         <section className="mb-20">
-          <SectionTitle>Why Choose QuickFinds?</SectionTitle>
+          <SectionTitle>Why Choose BlinkFind?</SectionTitle>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4">Our Expertise</h3>

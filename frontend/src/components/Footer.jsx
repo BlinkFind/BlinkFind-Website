@@ -7,7 +7,7 @@ const Footer = () => {
         {/* First column: Logo, Social Icons, and Text */}
         <div className="flex-1 flex flex-col items-center text-center">
           <div className="flex items-center justify-center space-x-0">
-            <img src="/logo.svg" alt="QuickFinds Logo" className="w-14" />
+            <img src="/logo.svg" alt="BlinkFind Logo" className="w-14" />
             <h3 className="text-2xl font-extrabold text-[#052d55]">
               Quick<span className="text-green-600 font-bold">Finds</span>
             </h3>
@@ -32,7 +32,7 @@ const Footer = () => {
             </a>
           </div>
           <p className="mt-16 text-gray-700">
-            © 2024 QuickFinds. All rights reserved.
+            © 2024 BlinkFind. All rights reserved.
           </p>
         </div>
 
@@ -52,7 +52,7 @@ const Footer = () => {
         <div className="flex-1 flex flex-col items-center text-center">
           <h3 className="text-xl font-bold mb-4">Address</h3>
           <p className="text-gray-700">
-            QuickFinds Head Office
+          BlinkFind Head Office
             <br />
             Near Ryan International School
             <br />

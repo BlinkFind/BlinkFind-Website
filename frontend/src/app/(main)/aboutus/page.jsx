@@ -5,7 +5,7 @@ const teamMembers = [
   {
     name: "Abdullah Khan",
     role: "Founder & CEO",
-    bio: "As the founder of QuickFinds, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
+    bio: "As the founder of BlinkFind, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
     image: "/OurTeamImages/avatar/abdullah.jpg",
     linkedin: "https://www.linkedin.com/in/abdullahkhanspn/",
     github: "https://github.com/Abdullahkhanspn",
@@ -29,14 +29,14 @@ const AboutUs = () => {
               Overview
             </h2>
             <p className="text-[#4A5568] mb-4">
-              QuickFinds is transforming into a cutting-edge startup dedicated
+            BlinkFind is transforming into a cutting-edge startup dedicated
               to identifying and solving real-world problems through innovative
               solutions. Our focus is on addressing challenges faced by users,
               businesses, and communities by developing faster, more secure, and
               optimized applications, websites, AI-driven solutions, and more.
             </p>
             <p className="text-[#4A5568] mb-4">
-              At QuickFinds, we are committed to rapidly finding, fixing, and
+              At BlinkFind, we are committed to rapidly finding, fixing, and
               improving solutions, whether through technology, design, or
               creative problem-solving. Our platform empowers users to tackle
               everyday inefficiencies and bring transformative ideas to life,
@@ -44,7 +44,7 @@ const AboutUs = () => {
               innovation, and job creation.
             </p>
             <p className="text-[#4A5568]">
-              With a future-focused approach, QuickFinds is not just solving
+              With a future-focused approach, BlinkFind is not just solving
               problems—we&apos;re building a smarter, more efficient world. Our
               agile team is ready to collaborate, innovate, and redefine how
               real-world challenges are tackled.
@@ -53,7 +53,7 @@ const AboutUs = () => {
           <div className="relative h-[300px] md:h-[400px]">
             <Image
               src="/aboutus.jpeg"
-              alt="QuickFinds Innovation"
+              alt="BlinkFind Innovation"
               layout="fill"
               objectFit="contain"
             />
@@ -79,7 +79,7 @@ const AboutUs = () => {
               Mission
             </h2>
             <p className="text-[#4A5568]">
-              At QuickFinds, our mission is to identify and solve real-world
+              At BlinkFind, our mission is to identify and solve real-world
               problems through the power of technology, design, and innovation.
               We are dedicated to creating optimized, secure, and scalable
               solutions that drive positive impact for users, businesses, and
@@ -96,7 +96,7 @@ const AboutUs = () => {
             Our Founder
           </h2>
           <p className="text-[#4A5568] mb-8 text-center">
-            Meet the visionary behind QuickFinds, a creative and solution-driven
+            Meet the visionary behind BlinkFind, a creative and solution-driven
             individual at the core of our innovations. Their expertise in
             software development, design, and AI drives our mission to solve
             real-world challenges with dedication and passion.
@@ -147,7 +147,7 @@ const AboutUs = () => {
           <div className="w-24 h-24 relative">
             <Image
               src="/logo.svg"
-              alt="QuickFinds Logo"
+              alt="BlinkFind Logo"
               layout="fill"
               objectFit="contain"
             />

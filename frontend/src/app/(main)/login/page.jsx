@@ -54,7 +54,7 @@ const Login = () => {
         <div className="bg-white py-8 px-4 shadow-lg sm:rounded-lg sm:px-10">
           <div className="flex justify-center mb-6">
             <div className="w-24 h-24 relative">
-              <Image src="logo.svg" alt="QuickFinds Logo" layout="fill" objectFit="contain" />
+              <Image src="logo.svg" alt="BlinkFind Logo" layout="fill" objectFit="contain" />
             </div>
           </div>
           <h2 className="mt-6 text-center text-3xl font-extrabold text-[#130F26] mb-6">

@@ -80,7 +80,7 @@ const OurTeam1 = () => {
           "https://www.facebook.com/share/nF5RyqiTx4qQjCVS/?mibextid=qi2Omg",
       },
       description:
-        "Hi, I'm a Marketing lead at QuickFinds and a CSE final year student building my career in software development.",
+        "Hi, I'm a Marketing lead at BlinkFind and a CSE final year student building my career in software development.",
     },
     {
       name: "Meeran Husain",
@@ -116,7 +116,7 @@ const OurTeam1 = () => {
       },
 
       description:
-        "As the founder of QuickFinds, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
+        "As the founder of BlinkFind, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
     },
     {
       name: "Hamza Khan",

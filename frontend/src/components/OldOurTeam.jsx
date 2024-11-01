@@ -38,7 +38,7 @@ const OurTeam = () => {
           "https://www.facebook.com/share/nF5RyqiTx4qQjCVS/?mibextid=qi2Omg",
       },
       description:
-        "Hi, I'm Nitendra Singh, currently working as a Marketing lead at QuickFinds apart from that I am CSE final student currently building my career in software development.",
+        "Hi, I'm Nitendra Singh, currently working as a Marketing lead at BlinkFind apart from that I am CSE final student currently building my career in software development.",
     },
     {
       name: "Meeran Husain",
@@ -74,7 +74,7 @@ const OurTeam = () => {
       },
 
       description:
-        "As the founder of QuickFinds, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
+        "As the founder of BlinkFind, I’m Abdullah, and I’ve turned my passion for technology into a mission to help businesses grow.",
     },
     {
       name: "Hamza Khan",

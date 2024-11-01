@@ -35,7 +35,7 @@ export default function AIDevelopment() {
       <header className="bg-[#6D28D9] text-white py-20">
         <div className="container mx-auto px-4">
           <h1 className="text-5xl font-bold mb-4">Artificial Intelligence Expertise</h1>
-          <p className="text-xl max-w-2xl">Empowering intelligent solutions for a better tomorrow with QuickFinds</p>
+          <p className="text-xl max-w-2xl">Empowering intelligent solutions for a better tomorrow with BlinkFind</p>
         </div>
       </header>
 
@@ -131,7 +131,7 @@ export default function AIDevelopment() {
         </section>
 
         <section className="mb-20">
-          <SectionTitle>Why Choose QuickFinds for AI Development?</SectionTitle>
+          <SectionTitle>Why Choose BlinkFind for AI Development?</SectionTitle>
           <div className="grid md:grid-cols-2 gap-8">
             <div className="bg-white p-8 rounded-lg shadow-md">
               <h3 className="text-2xl font-semibold mb-4">Our Expertise</h3>
@@ -164,7 +164,7 @@ export default function AIDevelopment() {
 
         <section className="bg-[#6D28D9] text-white p-12 rounded-lg shadow-lg">
           <h2 className="text-3xl font-bold mb-4">Ready to Embrace the Future with AI?</h2>
-          <p className="text-xl mb-8">Let QuickFinds lead you into the future of innovation with intelligent AI solutions that drive growth and enhance user experiences.</p>
+          <p className="text-xl mb-8">Let BlinkFind lead you into the future of innovation with intelligent AI solutions that drive growth and enhance user experiences.</p>
           <a href='/#Contact Us' className="bg-white text-[#6D28D9] font-bold py-3 px-6 rounded-full hover:bg-gray-100 transition-colors inline-flex items-center">
             Get Started
             <ArrowRight className="ml-2" />
