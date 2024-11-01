@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex items-center justify-center space-x-0">
             <img src="/logo.svg" alt="BlinkFind Logo" className="w-14" />
             <h3 className="text-2xl font-extrabold text-[#052d55]">
-              Quick<span className="text-green-600 font-bold">Finds</span>
+            Blink<span className="text-green-600 font-bold">Find</span>
             </h3>
           </div>
           <p className="mt-4 text-gray-700 font-normal">
@@ -38,7 +38,7 @@ const Footer = () => {
 
         {/* Second column: Quick Links */}
         <div className="flex-1 flex flex-col items-center text-center">
-          <h3 className="text-xl font-bold mb-4">Quick Links</h3>
+          <h3 className="text-xl font-bold mb-4">Blink Links</h3>
           <ul className="space-y-3">
             <li><a href="#Home" className="text-gray-700 hover:underline">Home</a></li>
             <li><a href="/aboutus" className="text-gray-700 hover:underline">About Us</a></li>
