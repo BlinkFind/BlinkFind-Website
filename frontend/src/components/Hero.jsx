@@ -70,10 +70,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -89,10 +89,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -107,10 +107,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -125,10 +125,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -143,10 +143,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -161,10 +161,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
@@ -179,10 +179,10 @@ const Hero = () => {
                 className="font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] text-left"
                 style={{ color: "rgb(2, 46, 80)" }}
               >
-                Quick
+                Blink
               </span>
               <span className="text-[#51B504] font-poppins lg:text-3xl xs:text-lg sm:text-xl font-bold leading-[30px] mr-[40px] text-left">
-                Finds
+                Find
               </span>
             </div>
             <span className="lg:text-3xl xs:text-lg sm:text-xl font-bold mr-[40px]">
