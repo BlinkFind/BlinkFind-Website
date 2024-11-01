@@ -28,7 +28,7 @@ const OurTeam1 = () => {
   const teamMembers = [
     {
       name: "Md Sadique",
-      role: "Frontend developer",
+      role: "Web developer",
       imageSrc: "/OurTeamImages/avatar/sadique.jpg", // Replace with your local image
       social: {
         linkedin: "/OurTeamImages/linkedin.svg",
