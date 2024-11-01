@@ -120,10 +120,10 @@ const Navbar = () => {
         <div className="flex items-center relative">
           <img src="/logo.svg" alt="Logo" />
           <span className="font-poppins text-lg font-bold leading-[30px] text-left text-[#022E50]">
-            Quick
+            Blink
           </span>
           <span className="text-[#51B504] font-poppins text-lg font-bold leading-[30px] text-left">
-            Finds
+            Find
           </span>
         </div>
         <ul className="flex lg:gap-[30px] items-center h-[44px] font-poppins font-[500] leading-[24px] lg:text-lg sm:text-[12px] sm:gap-[5px] sm:leading-[18px] xs:hidden cursor-pointer">
